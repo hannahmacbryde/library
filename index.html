@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="title">Library</h1>
+    </header>
+
+    <main class="main-container">
+        <div class="btns">
+            <button class="btn-add" onclick="addDummyBooks()">Add Sample Books</button>
+            <button class="btn-add" onclick="document.getElementById('newBookModal').showModal()">Add New Book</button>
+        </div>
+
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Read</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="libraryDisplay"></tbody>
+            </table>
+    
+            <!-- Modal Form -->
+            <dialog id="newBookModal">
+                <h2>Add New Book</h2>
+                <form id="bookForm">
+                    <label>Title: <input type="text" id="title" required></label><br><br>
+                    <label>Author: <input type="text" id="author" required></label><br><br>
+                    <label>Pages: <input type="number" id="pages" required></label><br><br>
+                    <label>
+                        <input type="checkbox" id="read"> Have you read it?
+                    </label><br><br>
+                    <button class="btn-add" type="submit">Add Book</button>
+                    <button class="btn-add" type="button" onclick="document.getElementById('newBookModal').close()">Cancel</button>
+                </form>
+            </dialog>
+        </div>
+    </main>
+
+    <footer>
+        Copyright ©
+        <script>
+            document.write(new Date().getFullYear());
+        </script>
+        hannahmacbryde
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
